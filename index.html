@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cafe</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://png.pngtree.com/background/20230526/original/pngtree-3d-rendered-cafe-house-on-street-picture-image_2744694.jpg");
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
+
+.mySlides {display:none}
+</style>
+</head>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#menu" class="w3-button w3-block w3-black">MENU</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#where" class="w3-button w3-block w3-black">WHERE</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">Open from 6am to 5pm</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:90px">Cozy Coffee<br>Cafe</span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-white">15 Adr street, 5015</span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT THE CAFE</span></h5>
+    <p>This cafe is a newly started business by the company Artisan Espresso. We are a very traditional cafe with our menu options aswell as the overall design of our cafe. As a business we prioritize your experience as number 1. Our staff is trained in all around expertise to make your experience the best as possible here at Cozy Cafe now. </p>
+    <div class="w3-panel w3-leftbar w3-light-grey">
+      <p>Chef, Coffeeist and Owner: Kaitlyn Fairfield</p>
+    </div>
+    <img src="images/pic1.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+    <p><strong>Opening and Closing Hours:</strong> Sunday through Friday from 6:15 am to  6 pm.</p>
+    <p><strong>Address:</strong> 15 Adr street, 5015, NY</p>
+  </div>
+</div>
+
+<div class="w3-content" style="max-width:800px">
+  <img class="mySlides" src="images/foods.jfif" style="width:100%">
+  <img class="mySlides" src="images/drinks.jpg" style="width:100%">
+  <img class="mySlides" src="images/paris.jpg" style="width:100%">
+</div>
+
+<div class="w3-center">
+  <div class="w3-section">
+    <button class="w3-button w3-light-grey" onclick="plusDivs(-1)">❮ Prev</button>
+    <button class="w3-button w3-light-grey" onclick="plusDivs(1)">Next ❯</button>
+  </div>
+  <button class="w3-button demo" onclick="currentDiv(1)">1</button> 
+  <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
+  <button class="w3-button demo" onclick="currentDiv(3)">3</button> 
+</div>
+
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:700px">
+ 
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">MENU</span></h5>
+  
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+        <div class="w3-col s6 tablink">Eat</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+        <div class="w3-col s6 tablink">Drink</div>
+      </a>
+    </div>
+
+    <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+    
+      <h5>Bacon Egg and Cheese</h5>
+      <p class="w3-text-grey">Our bacon egg and cheeses are made with fresh meat and toasted buns with melted cheese on top 8.99</p><br>
+    
+      <h5>Croissants</h5>
+      <p class="w3-text-grey">Vanilla flavored batter our croissants are the best around in town 5.99</p><br>
+    
+      <h5>Scrambled eggs</h5>
+      <p class="w3-text-grey">Scrambled eggs, made with garlic and pepper to be extra flavorful 6.99</p><br>
+    
+      <h5>Pancakes and Waffles</h5>
+      <p class="w3-text-grey">With syrup and butter we offer a variety of our pancakes and waffles such as blueberry, strawberry, raspberry and our famous chocolate chip 14.99</p>
+    </div>
+
+    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Coffee</h5>
+      <p class="w3-text-grey">Regular old coffee made by the finest ingredients in the market currently bought fresh only 3.99</p><br>
+    
+      <h5>Hot Coco</h5>
+      <p class="w3-text-grey">Hot Coco's for the freezing winter time to keep you sastified and warm throughout the day 4.99</p><br>
+    
+      <h5>Tea</h5>
+      <p class="w3-text-grey">Brewed tea with the most healthy and organic ingredients to make your overall health the best 7.99</p><br>
+    
+      <h5>Iced Coffee</h5>
+      <p class="w3-text-grey">Cold iced coffees made to your exact preferences now for 4.99</p><br>
+    
+      <h5>Latte</h5>
+      <p class="w3-text-grey">Our caramel brulee lattes are perfect for this cold season, including a limited time gingerbread and sugar cookie latte for December only 9.99</p>
+    </div>  
+    <img src="images/pic2.jpg" style="width:100%;max-width:1000px;margin-top:32px;">
+  </div>
+</div>
+
+<button onclick="myFunction('Demo1')" class="w3-btn w3-block w3-black w3-left-align">Open Here</button>
+<div id="Demo1" class="w3-container w3-hide">
+  <h4>Social Media Pages</h4>
+  <p>Instagram: CozyCaffeeCoffee</p>
+</div>
+
+<!-- Contact/Area Container -->
+<div class="w3-container" id="where" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">WHERE TO FIND US</span></h5>
+    <p>Find us at some address at some place.</p>
+    <img src="/w3images/map.jpg" class="w3-image" style="width:100%">
+    <p><span class="w3-tag">FYI!</span> We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p>
+    <p><strong>Reserve</strong> a table here, fill out the form below to make your reservation now</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required name="People"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2020-11-16T20:00"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+      <p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+</div>
+<div class="w3-container">
+  <h2>Photo Inside</h2>
+
+  <div class="w3-card-4" style="width:50%">
+    <img src="images/insidecafe.jfif" alt="Alps" style="width: 935px" height="550px">
+    <div class="w3-container w3-center">
+      <p>Inside of our Cafe!</p>
+    </div>
+  </div>
+</div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p>WHS 25' WEB DESIGN</p>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-red", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-red";
+}
+
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>
